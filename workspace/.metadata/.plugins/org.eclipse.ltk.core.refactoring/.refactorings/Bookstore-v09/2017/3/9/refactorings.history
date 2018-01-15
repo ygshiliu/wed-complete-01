@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;gson&apos; from expression &apos;new Gson()&apos;&#x0D;&#x0A;- Original project: &apos;Bookstore-v09&apos;&#x0D;&#x0A;- Variable name: &apos;gson&apos;&#x0D;&#x0A;- Destination method: &apos;com.atguigu.servlet.CartServlet.addBook2Cart()&apos;&#x0D;&#x0A;- Variable expression: &apos;new Gson()&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;gson&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;com.atguigu.servlet{CartServlet.java" name="gson" replace="true" selection="1532 0" stamp="1488442488672" version="1.0"/>
+</session>

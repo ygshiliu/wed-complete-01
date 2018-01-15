@@ -1,0 +1,125 @@
+
+报文格式：
+
+报文首部
+	报文首行
+	报文头
+空行
+报文体
+
+******************************************************************************************************
+
+GET请求报文：
+格式：
+	只有报文首部，没有报文体，也就没有空行
+	报文首行
+	报文头
+	
+GET请求报文解释：
+-报文首行：
+	GET 	/06-web-http/target.html?name=wang&pwd=123 HTTP/1.1
+	-请求方式   请求的资源路径？请求参数			       协议名/协议版本
+	
+-报文头：
+	- 通过观察以下报文头是由键值对组成，有的是一个键对就一个值 ，有的是一个键对应多个值 
+	Accept: application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, */*
+	-允许接收的文件类型：值是一些MIME值 */*代表可以接收任何类型
+	Referer: http://localhost:8080/06-web-http/index.html
+	-请求的来源：防止资源盗链  统计广告计费
+	Accept-Language: zh-CN
+	-允许的语言：语言-国际 zh代表中文 CN代表中国
+	User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)
+	-用户系统信息：
+	Accept-Encoding: gzip, deflate
+	-允许的压缩文件类型：
+	Host: localhost:8080
+	-主机：
+	Connection: Keep-Alive
+	-连接时间：Keep-Alive表示一个长连接，告诉服务器请等待当前页面的其它资源加载成功后再断开
+
+***************************************************************************************************************************************
+POST请求报文：
+格式：
+	请求首部
+		请求首行
+		请求头
+	空行
+	请求体
+	
+POST请求报文解释：
+请求首部：
+	-请求首行：
+		POST /06-web-http/target.html HTTP/1.1
+		-请求方式	资源路径		  协议名/协议版本
+	-请求头：
+		Accept: application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, */*
+		Referer: http://localhost:8080/06-web-http/index.html
+		Accept-Language: zh-CN
+		User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)
+		Content-Type: application/x-www-form-urlencoded
+		-请求体内容的类型：application/x-www-form-urlencoded代表请求体中的内容需要进行url编码
+			name=%E5%BC%A0%E4%B8%89&pwd=121 用户输入的信息会进行二进制编码 ，然后再转成十六制
+		Accept-Encoding: gzip, deflate
+		Host: localhost:8080
+		Content-Length: 19
+		Connection: Keep-Alive
+		Cache-Control: no-cache
+		-是否使用缓存：no-cache表示不使用缓存
+空行：用来分隔请求首部与请求体
+请求体：
+	name=wang&pwd=12334
+
+*************************************************************************************************************************************
+
+响应报文：
+格式：
+	响应首部
+		响应首行
+		响应头
+	空行
+	响应体
+	
+常见的状态码：
+	200		成功
+	302		重定向
+	404		未找到资源
+	500		服务器内部错误
+	
+响应报文解释：
+响应首部
+	-响应首行：
+		HTTP/1.1 200 OK
+		-协议名/协议版本  响应状态码	响应状态码的描述信息
+		
+	-响应头：
+		Server: Apache-Coyote/1.1
+		-服务器版本：
+		Accept-Ranges: bytes
+		-允许的范围
+		ETag: W/"145-1486864466474"
+		-web缓存验证机制：
+			"123456789"   -- 一个强ETag验证符
+			W/"123456789"  -- 一个弱ETag验证符
+		Last-Modified: Sun, 12 Feb 2017 01:54:26 GMT
+		-最后修改时间：格林威治标准时间
+		Content-Type: text/html
+		-响应体中的内容类型：  text/html告诉浏览器是一个html页面
+		Content-Length: 145
+		-响应体中的长度：
+		Date: Sun, 12 Feb 2017 01:55:51 GMT
+		-响应返回的时间
+空行：用来分隔响应首部与响应体
+响应体：
+	一般情况响应体就是网页内容，即我们在浏览器中看到的内容就是响应报文中响应体部分
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>Success!!</h1>
+	</body>
+	</html>
+
+*****************************************************************************************************************************************

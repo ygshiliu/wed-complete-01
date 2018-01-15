@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>HelloWorld</title>
+<!-- <script type="text/javascript">
+	//在当前页面加载完成之后才被调用
+	window.onload = function(){
+		var btn = document.getElementById("btnId");
+		btn.onclick = function(){
+			alert("通过js实现！");
+		}
+	}
+</script> -->
+<!-- 首先需要将jQuery文件引入到当前文档中 -->
+<!-- jQuery库实际上就是一个js文件，只需要在网页中直接引入这个文件就可以了 -->
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+	
+	//$(function(){})就相当于window.onload功能
+	$(function(){
+		//获取按钮,相当于document.getElementById("btnId")功能
+		var $btn = $("#btnId");
+		//给按钮绑定一个单击事件
+		$btn.click(function(){
+			alert("通过jQuery实现 ！");
+		})
+	})
+
+</script>
+</head>
+<body>
+
+	<button id="btnId">SayHello</button>
+
+</body>
+</html>

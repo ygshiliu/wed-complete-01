@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JS中的事件</title>
+
+</head>
+<body>
+	<!-- 第1种方式 :通过标签的事件属性来绑定响应函数 -->
+	<button  onclick="alert('sdfsdf')">SayHello</button>
+	
+	<button id="btnId" >SayHello</button>
+	
+	<!-- 第2种方式 -->
+	<script type="text/javascript">
+		//获取按钮对象
+		var btn = document.getElementById("btnId");
+		//为按钮对象绑定单击响应函数
+		btn.onclick = function(){
+			alert("单击事件触发！");
+		}
+		//像这种由我们定义，但是却不是我们调用的函数，称为回调函数
+		
+	</script>
+</body>
+</html>

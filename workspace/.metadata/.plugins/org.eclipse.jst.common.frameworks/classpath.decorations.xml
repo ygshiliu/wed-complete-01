@@ -1,0 +1,7 @@
+<classpath>
+  <container id="Bookstore-v02!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/workspace/0816/Bookstore-v02/WebContent/WEB-INF/lib/commons-dbutils-1.3.jar">
+      <source-attachment-path>G:/课堂资料/JavaWEB课件/source/src/commons-dbutils-1.3-src</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

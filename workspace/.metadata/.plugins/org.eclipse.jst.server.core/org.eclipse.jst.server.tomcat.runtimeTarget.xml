@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<classpath>
+  <source-attachment entry="D:/Program Files/apache-tomcat-6.0.47/lib/catalina.jar" runtime-id="Apache Tomcat (Runtime) v6.0" source-attachment-path="G:/课堂资料/JavaWEB课件/06.WEB环境搭建/apache-tomcat-6.0.47-src.zip"/>
+  <source-attachment entry="D:/Program Files/apache-tomcat-6.0.47/lib/jasper-el.jar" runtime-id="Apache Tomcat (Runtime) v6.0" source-attachment-path="G:/课堂资料/JavaWEB课件/06.WEB环境搭建/apache-tomcat-6.0.47-src.zip"/>
+  <source-attachment entry="D:/Program Files/apache-tomcat-6.0.47/lib/jasper.jar" runtime-id="Apache Tomcat (Runtime) v6.0" source-attachment-path="G:/课堂资料/JavaWEB课件/06.WEB环境搭建/apache-tomcat-6.0.47-src.zip"/>
+  <source-attachment entry="D:/Program Files/apache-tomcat-6.0.47/lib/servlet-api.jar" runtime-id="Apache Tomcat (Runtime) v6.0" source-attachment-path="G:/课堂资料/JavaWEB课件/06.WEB环境搭建/apache-tomcat-6.0.47-src.zip"/>
+</classpath>

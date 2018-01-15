@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS基本语法</title>
+<!-- 第2种：使用style标签，通常写在head标签中 -->
+<!-- 可以实现在当前页面中进行复用 -->
+<!-- <style type="text/css">
+	
+	p{
+		background-color:green;
+		color:red;
+		font-size:30px;
+	}
+
+</style> -->
+
+<!-- 第3种：通过link标签引入一个外面的css文件 -->
+<!-- 此种方案最提倡，可以让多个页面复用 -->
+<!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+
+</head>
+<body align="center">
+	
+	<!-- 第1种：直接通过标签的style属性设置样式 -->
+	<!-- 通常将一张网页分成结构、表现、行为三部分，而一个设计优良的网页要做到三者分离 -->
+	<!-- 这里html与css样式耦合，不能复用 ，不推荐使用-->
+	<!-- <p style="color:red;">落霞与孤鹜齐飞，秋水共长天一色</p> -->
+	<p style="color:red;">落霞与孤鹜齐飞，秋水共长天一色</p>
+	<p style="color:red;">落霞与孤鹜齐飞，秋水共长天一色</p>
+	
+</body>
+</html>

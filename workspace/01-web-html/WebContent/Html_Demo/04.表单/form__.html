@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表单</title>
+</head>
+<body>
+	<br><br><br>
+	<!-- 使用form标签来创建一个表单 -->
+	<!-- 作用：用来向服务器提交用户信息 -->
+	<!-- action:用来指向可以处理用户信息的服务器url路径 -->
+	<!-- method:用来指定请求方式，有两个值get和post，默认是get -->
+	
+	<!-- 
+		当点击提交按钮后，请求信息会以如下形式提交给服务器：
+		target.html?name=小平&password=123456
+		服务器地址与请求参数之间使用？号分隔
+		请求参数以键值对的形式使用=号连接，键是通过name属性指定的值，而value就是用户输入的值
+		多个请求参数之间使用&符分隔
+	 -->
+	<form action="target.html" method="get" align="center">
+		<!-- 文本框 -->
+		姓名：<input type="text" name="name" ><br><br>
+		<!-- 密码框 -->
+		密码：<input type="password" name="password" ><br><br>
+		<!-- 单选按钮 -->
+		<!-- 像这种需要用户来选择的表单项，我们需要指定它的value属性值  -->
+		<!-- 在这里name属性还用来分组  -->
+		性别：<input type="radio" name="gender" value="male">男
+		<input type="radio" name="gender" value="female">女<br><br>
+		<!-- 复选框 -->
+		<!-- 复选框与单选框一样，也需要指定name与value属性 -->
+		爱好：<input type="checkbox" name="hobby" value="lq">篮球
+		<input type="checkbox" name="hobby" value="pqq">乒乓球
+		<input type="checkbox" name="hobby" value="zq">足球<br><br>
+		
+		<!-- 下拉列表 :使用select标签来声明一个下拉列表域，而使用其子标签option来创建下拉列表项 -->
+		<!-- 
+			下拉列表同样也需要指定name与value属性
+			name属性在select标签中指定
+			而value属性在option标签中指定 
+		-->
+		你喜欢的语言：
+		<select name="language">
+			<option value="java">Java</option>
+			<option value="C">C</option>
+			<option value="C#">C#</option>
+			<option value="php">php</option>
+		</select><br><br>
+		
+		<!-- 提交按钮 -->
+		<input type="submit" value="注册">
+		
+	</form>
+
+</body>
+</html>

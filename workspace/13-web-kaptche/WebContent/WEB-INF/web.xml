@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>13-web-kaptche</display-name>
+
+<servlet>
+	<servlet-name>KaptchaServlet</servlet-name>
+	<servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+	<init-param>
+		<param-name>kaptcha.textproducer.char.length</param-name>
+		<param-value>6</param-value>
+	</init-param>
+	<init-param>
+		<param-name>kaptcha.noise.color</param-name>
+		<param-value>red</param-value>
+	</init-param>
+	<init-param>
+		<param-name>kaptcha.session.key</param-name>
+		<param-value>code</param-value>
+	</init-param>
+</servlet>
+<servlet-mapping>
+	<servlet-name>KaptchaServlet</servlet-name>
+	<url-pattern>/img</url-pattern>
+</servlet-mapping>
+</web-app>

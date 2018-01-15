@@ -1,0 +1,39 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		List list = new ArrayList();
+		list.add("宋智孝");
+		list.add("金钟国");
+		list.add("刘在石");
+		list.add("李光洙");
+		
+		//将list设置到域中
+		request.setAttribute("list", list);
+	
+	%>
+	<!-- 遍历一个集合 -->
+	<c:forEach items="${list }" var="name">
+		<h1>${name }</h1>
+	</c:forEach>
+	
+	<!-- 遍历一组数据 -->
+	<!-- c:foreach 用来在页面中对标签体进行循环处理-->
+	<!-- begin用来指定开始值 -->
+	<!-- end用来指定结束值 -->
+	<!-- step用来指定步长 -->
+	<!-- var用来保存每次遍历的值，将保存到域里，默认是pageScope域 -->
+	<c:forEach begin="1" end="20" step="2" var="index">
+		${pageScope.index }	
+	</c:forEach>
+</body>
+</html>

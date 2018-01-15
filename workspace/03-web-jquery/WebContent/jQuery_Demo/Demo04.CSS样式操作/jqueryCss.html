@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	body {
+		background-color: #bfa;
+	}
+	
+	div{
+		width:100px;
+		height:260px;
+	}
+	
+	div.border{
+		border: 2px white solid;
+	}
+	
+	div.redDiv{
+		background-color: red;
+	}
+	
+	div.blackDiv{
+		background-color: black;
+	}
+	
+	
+	
+</style>
+
+<script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+	
+
+	$(function(){
+		
+		//选择要操作的div元素;
+		var $divEle = $('div:first');
+		
+		$('#btn01').click(function(){
+			//addClass() - 向被选元素添加一个或多个类 
+			$divEle.addClass("redDiv");
+		});
+		
+		$('#btn02').click(function(){
+			//removeClass() - 从被选元素删除一个或多个类 
+			$divEle.removeClass("redDiv");
+		});
+		
+		$('#btn03').click(function(){
+			//hasClass() - 检查被选元素是否包含指定的 class
+			//返回布尔值
+			var flag = $divEle.hasClass("redDiv");
+			alert(flag)
+		});
+		
+		$('#btn04').click(function(){
+			//toggleClass() - 对被选元素进行添加/删除类的切换操作 
+			$divEle.toggleClass("redDiv");
+		});
+		
+		$('#btn05').click(function(){
+			//css() - 设置或返回样式属性
+			var color = $divEle.css("background-color");
+			alert(color);
+		});
+		
+		$('#btn06').click(function(){
+			//height() - 设置或返回匹配元素的高度。
+			var height = $divEle.height();
+			alert(height);
+		});
+		
+		$('#btn07').click(function(){
+			//width() - 设置或返回匹配元素的宽度。
+			$divEle.width(260);
+		});
+		
+		$('#btn08').click(function(){
+			//offset() - 返回第一个匹配元素相对于文档的位置。
+			//返回一个js对象，包括left与top两个属性,left代表左边距，top代表顶边距
+			//js对象主要是用来描述 当前对象左上角那一点相对当前窗口的偏移位置
+			//var obj = $divEle.offset();
+			//alert(obj.left+"--"+obj.top);
+			
+			//设置div位置
+			$divEle.offset(
+				{
+					left:20,
+					top:50
+				}		
+			)
+		});
+		
+		$('#btn09').click(function(){
+			//hide() - 隐藏元素。
+			$divEle.hide();
+		});
+		
+		$('#btn10').click(function(){
+			//show() - 显示元素。
+			$divEle.show();
+		
+		});
+		
+		$('#btn11').click(function(){
+			//toggle() - 切换元素显示状态。
+			$divEle.toggle();
+		});
+		
+	})
+</script>
+</head>
+<body>
+
+	<table align="center">
+		<tr>
+			<td>
+				<div class="border">
+				</div>
+			</td>
+			
+			<td>
+				<div class="btn">
+					<input type="button" value="addClass()" id="btn01"/>
+					<input type="button" value="removeClass()" id="btn02"/>
+					<input type="button" value="hasClass()" id="btn03"/>
+					<input type="button" value="toggleClass()" id="btn04"/>
+					<input type="button" value="css()" id="btn05"/>
+					<input type="button" value="height()" id="btn06"/>
+					<input type="button" value="width()" id="btn07"/>
+					<input type="button" value="offset()" id="btn08"/>
+					<input type="button" value="hide()" id="btn09"/>
+					<input type="button" value="show()" id="btn10"/>
+					<input type="button" value="toggle()" id="btn11"/>
+				</div>
+			</td>
+		</tr>
+	</table>
+	
+	
+	
+	<br /> <br />
+	
+	
+	<br /> <br />
+	
+	
+	
+</body>
+</html>

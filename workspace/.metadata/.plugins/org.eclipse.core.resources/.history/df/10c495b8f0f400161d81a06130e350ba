@@ -1,0 +1,18 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 主要用来重写url地址 -->
+	<!-- scope用来指定重写后的url地址保存在哪个域对象中 -->
+	<!-- value指要重写url地址的值  -->
+	<!-- var用来保存重写后的url地址，并将其作为属性名保存到域对象中 -->
+	<c:url scope="request" value="/1.jsp" var="url"></c:url>
+	${requestScope.url }
+</body>
+</html>

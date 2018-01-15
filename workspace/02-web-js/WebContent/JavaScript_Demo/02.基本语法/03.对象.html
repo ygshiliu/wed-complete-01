@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS中的对象</title>
+<script type="text/javascript">
+	//创建对象的两种方式
+	//第一种方式
+	var obj = new Object();
+	
+	//第二种方式
+	var obj2 = {};
+	
+	//动态的向对象中添加属性
+	// 对象.属性 = 值 
+	obj.name = "xiaoai";
+	obj.age = 16;
+	
+	//获取对象的属性:对象.属性
+	var name = obj.name;
+	//alert(name);
+	
+	//创建对象的同时给对象添加属性
+	//属性是以键值对形式出现，键与值之间使用冒号分开
+	//多个属性间使用逗号分开
+	//需要注意，最后一个属性不加逗号
+	var obj3 = {
+			name:"meinu",
+			age:16,
+			sex:"female",
+			fun:function(){
+				//this指当前函数所属的对象
+				return "name="+this.name+",age="+this.age;
+			}
+	}
+	
+	var str = obj3.fun();
+	alert(str);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

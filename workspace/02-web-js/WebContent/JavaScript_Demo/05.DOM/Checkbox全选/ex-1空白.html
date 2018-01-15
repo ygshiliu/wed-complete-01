@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>全选练习</title>
+<script type="text/javascript">
+
+	/*
+	技术点：
+	1.DOM查询
+	2.事件响应函数绑定
+	3.checkbox操作
+	4.在事件响应函数中使用this关键字代表当前控件
+	5.逻辑思维能力
+	*/
+	
+	window.onload = function(){
+		
+		//根据name属性获取复选框
+		var items = document.getElementsByName("items");
+		//获取全选全不选复选框
+		var allBox = document.getElementById("checkedAllBox");
+		
+		//1.#checkedAllBtn
+		myClick("checkedAllBtn",function(){
+			//将复选框设置为选中状态
+			for(var i=0;i<items.length;i++){
+				items[i].checked = true;
+			}
+			//为全选全不选复选框设置为选中状态
+			allBox.checked = true;
+		})
+		//2.#checkedNoBtn
+		myClick("checkedNoBtn",function(){
+			//将复选框设置为没选中状态
+			for(var i=0;i<items.length;i++){
+				items[i].checked = false;
+			}
+			//为全选全不选复选框设置为没选中状态
+			allBox.checked = false;
+		})
+		
+		//3.#checkedRevBtn
+		myClick("checkedRevBtn",function(){
+			//设置复选框的状态，如果选中设置为没选中，如果没选中设置选中
+			var len = 0;
+			for(var i=0;i<items.length;i++){
+				if(items[i].checked){
+					items[i].checked = false;
+				}else{
+					items[i].checked = true;
+					len++;
+				}
+				
+			}
+			//设置全选全不选复选框状态，需要对items复选框进行统计
+			//如果items的选择个数为4时，全选复选框才被选中，否则设置为没选中状态
+			/* for(var j=0;j<items.length;j++){
+				if(items[j].checked){
+					len++;
+				}
+			} */
+			//alert(len);
+			allBox.checked = (len == 4);
+		})
+		//4.#sendBtn
+		myClick("sendBtn",function(){
+			for(var i=0;i<items.length;i++){
+				if(items[i].checked){
+					//获取item选项的value属性值 ，并弹出
+					alert(items[i].value);
+				}
+			}
+		})
+		//5.#checkedAllBox
+		myClick("checkedAllBox",function(){
+			//this关键字，代表当前函数所属的对象
+			var flag = this.checked;
+			for(var i=0;i<items.length;i++){
+				items[i].checked = flag;
+			}
+		})
+		//6.items
+		for(var i=0;i<items.length;i++){
+			items[i].onclick = function(){
+				var len = 0;
+				for(var j=0;j<items.length;j++){
+					if(items[j].checked){
+						len++;
+					}
+				}
+				allBox.checked = (len == 4);
+			}
+		}
+	}
+	
+	function myClick(btnstr,fun){
+		var btn = document.getElementById(btnstr);
+		btn.onclick = fun;
+	}
+	
+</script>
+</head>
+<body>
+
+	<form method="post" action="">
+		你爱好的运动是？<input type="checkbox" id="checkedAllBox" />全选/全不选 
+		
+		<br />
+		<input type="checkbox" name="items" value="足球" />足球
+		<input type="checkbox" name="items" value="篮球" />篮球
+		<input type="checkbox" name="items" value="羽毛球" />羽毛球
+		<input type="checkbox" name="items" value="乒乓球" />乒乓球
+		<br />
+		<input type="button" id="checkedAllBtn" value="全　选" />
+		<input type="button" id="checkedNoBtn" value="全不选" />
+		<input type="button" id="checkedRevBtn" value="反　选" />
+		<input type="button" id="sendBtn" value="提　交" />
+	</form>
+
+</body>
+</html>

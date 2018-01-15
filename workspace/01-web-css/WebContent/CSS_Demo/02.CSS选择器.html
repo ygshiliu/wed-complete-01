@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS选择器</title>
+	<style type="text/css">
+		
+		/* 元素选择器：标签名{} */
+		p{
+			font-size:20px;
+		}
+		
+		/* 一个页面中id属性它是唯一的，在页面中不能出现重复的id属性 */
+		/* ID选择器： 以#开头，后面跟着id属性值  */
+		#p1{
+			background-color:red;
+		}
+		
+		/* 类选择器：以.开头，后面跟着class属性值  */
+		/*  一个页面中相同class属性可以有多个，我们使用class属性为标签分组  */
+		.p2{
+			
+			color:blue;
+		}
+		
+		/* 分组选择器：使用，号将多个选择器连接起来 */
+		p,div{
+			border:solid green 1px;
+		}
+	
+	</style>
+	
+</head>
+<body>		
+	
+	
+	
+	<p>那是我日夜思念深深爱着的人啊</p>
+	<p>到底我该如何表达</p>
+	<p id="p1">她会接受我吗</p>
+	<p class="p2">也许永远都不会跟她说出那句话</p>
+	<p class="p2">注定我要浪迹天涯</p>
+	<p class="p2">怎么能有牵挂</p>
+	
+	<div class="p2">怎么能有牵挂</div>
+	
+</body>
+</html>
+

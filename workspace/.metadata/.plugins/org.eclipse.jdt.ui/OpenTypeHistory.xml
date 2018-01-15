@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=Bookstore-v02/D:\/workspace\/0816\/Bookstore-v02\/WebContent\/WEB-INF\/lib\/c3p0-0.9.1.2.jar&lt;com.mchange.v2.c3p0(ComboPooledDataSource.class[ComboPooledDataSource" modifiers="49" timestamp="1487053647847"/>
+<typeInfo handle="=Bookstore-v02/D:\/workspace\/0816\/Bookstore-v02\/WebContent\/WEB-INF\/lib\/commons-dbutils-1.3.jar&lt;org.apache.commons.dbutils(ResultSetHandler.class[ResultSetHandler" modifiers="1537" timestamp="1487053647854"/>
+<typeInfo handle="=Bookstore-v02/src&lt;com.atguigu.dao{UserDao.java[UserDao" modifiers="513" timestamp="1487061338709"/>
+<typeInfo handle="=Bookstore-v02/src&lt;com.atguigu.dao.impl{UserDaoImpl.java[UserDaoImpl" modifiers="1" timestamp="1487061730741"/>
+<typeInfo handle="=Bookstore-v02/src&lt;com.atguigu.service{UserService.java[UserService" modifiers="513" timestamp="1487068126400"/>
+<typeInfo handle="=Bookstore-v02/src&lt;com.atguigu.service.impl{UserServiceImpl.java[UserServiceImpl" modifiers="1" timestamp="1487068444571"/>
+<typeInfo handle="=Bookstore-v05/src&lt;com.atguigu.dao{BookDao.java[BookDao" modifiers="513" timestamp="1487578286756"/>
+<typeInfo handle="=Bookstore-v05/src&lt;com.atguigu.dao{BaseDao.java[BaseDao" modifiers="1" timestamp="1487412126027"/>
+<typeInfo handle="=Bookstore-v05/src&lt;com.atguigu.dao.impl{BookDaoImpl.java[BookDaoImpl" modifiers="1" timestamp="1487578339411"/>
+<typeInfo handle="=Bookstore-v05/src&lt;com.atguigu.service{BookService.java[BookService" modifiers="513" timestamp="1487570455416"/>
+<typeInfo handle="=Bookstore-v02/src&lt;com.atguigu.dao{BaseDao.java[BaseDao" modifiers="1" timestamp="1487062997263"/>
+<typeInfo handle="=09-web-EL/D:\/Program Files\/apache-tomcat-6.0.47\/lib\/servlet-api.jar&lt;javax.servlet.http(HttpSession.class[HttpSession" modifiers="1537" timestamp="1476335392000"/>
+<typeInfo handle="=09-web-EL/D:\/Program Files\/apache-tomcat-6.0.47\/lib\/catalina.jar&lt;org.apache.catalina.session(StandardSessionFacade.class[StandardSessionFacade" modifiers="33" timestamp="1476335392000"/>
+<typeInfo handle="=Bookstore-v06/src&lt;com.atguigu.bean{Cart.java[Cart" modifiers="1" timestamp="1487842710572"/>
+<typeInfo handle="=Bookstore-v07/src&lt;com.atguigu.dao{OrderDao.java[OrderDao" modifiers="513" timestamp="1487906483742"/>
+<typeInfo handle="=Bookstore-v07/src&lt;com.atguigu.dao.impl{OrderDaoImpl.java[OrderDaoImpl" modifiers="1" timestamp="1487935331989"/>
+<typeInfo handle="=Bookstore-v07/src&lt;com.atguigu.dao{BaseDao.java[BaseDao" modifiers="1" timestamp="1487990000559"/>
+<typeInfo handle="=Bookstore-v07/src&lt;com.atguigu.dao{OrderItemDao.java[OrderItemDao" modifiers="513" timestamp="1487989339060"/>
+<typeInfo handle="=Bookstore-v07/src&lt;com.atguigu.dao.impl{OrderItemDaoImpl.java[OrderItemDaoImpl" modifiers="1" timestamp="1487989457262"/>
+<typeInfo handle="=Bookstore-v07/src&lt;com.atguigu.service{OrderService.java[OrderService" modifiers="513" timestamp="1487946066824"/>
+<typeInfo handle="=09-web-EL/D:\/Program Files\/apache-tomcat-6.0.47\/lib\/servlet-api.jar&lt;javax.servlet.http(HttpServletRequestWrapper.class[HttpServletRequestWrapper" modifiers="33" timestamp="1476335392000"/>
+<typeInfo handle="=15-web-Filter/D:\/Program Files\/JDK\/jre\/lib\/rt.jar&lt;java.util.logging(Filter.class[Filter" modifiers="1537" timestamp="1467709889817"/>
+<typeInfo handle="=15-web-Filter/D:\/Program Files\/apache-tomcat-6.0.47\/lib\/servlet-api.jar&lt;javax.servlet(Filter.class[Filter" modifiers="1537" timestamp="1476335392000"/>
+<typeInfo handle="=15-web-Filter/src&lt;com.atguigu.filter{HttpFilter.java[HttpFilter" modifiers="1025" timestamp="1488030946003"/>
+<typeInfo handle="=16-web-listener/D:\/Program Files\/apache-tomcat-6.0.47\/lib\/servlet-api.jar&lt;javax.servlet(ServletContextListener.class[ServletContextListener" modifiers="1537" timestamp="1476335392000"/>
+<typeInfo handle="=16-web-listener/D:\/Program Files\/apache-tomcat-6.0.47\/lib\/servlet-api.jar&lt;javax.servlet(ServletContext.class[ServletContext" modifiers="1537" timestamp="1476335392000"/>
+<typeInfo handle="=16-web-listener/D:\/Program Files\/apache-tomcat-6.0.47\/lib\/servlet-api.jar&lt;javax.servlet.http(HttpSessionBindingListener.class[HttpSessionBindingListener" modifiers="1537" timestamp="1476335392000"/>
+<typeInfo handle="=09-TestJavaBean/D:\/Program Files\/JDK\/jre\/lib\/rt.jar&lt;java.sql(PreparedStatement.class[PreparedStatement" modifiers="1537" timestamp="1467709889817"/>
+<typeInfo handle="=09-TestJavaBean/D:\/Program Files\/JDK\/jre\/lib\/rt.jar&lt;java.text(DateFormat.class[DateFormat" modifiers="1057" timestamp="1467709889817"/>
+<typeInfo handle="=09-web-EL/D:\/Program Files\/apache-tomcat-6.0.47\/lib\/servlet-api.jar&lt;javax.servlet(GenericServlet.class[GenericServlet" modifiers="1057" timestamp="1476335392000"/>
+<typeInfo handle="=09-web-EL/D:\/Program Files\/apache-tomcat-6.0.47\/lib\/servlet-api.jar&lt;javax.servlet.http(HttpServlet.class[HttpServlet" modifiers="1057" timestamp="1476335392000"/>
+</typeInfoHistroy>

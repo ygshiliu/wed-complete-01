@@ -1,0 +1,16 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 用来向页面中输出信息，通常与EL表达式结合使用 -->
+	<!-- default用来指定一个默认值 ，当不能获取属性值时显示 -->
+	<!-- escapeXml表示是否转义特殊字符，默认为true自动转义 -->
+	<c:out value="${param.name }" default="Tom" escapeXml="false"></c:out>
+</body>
+</html>

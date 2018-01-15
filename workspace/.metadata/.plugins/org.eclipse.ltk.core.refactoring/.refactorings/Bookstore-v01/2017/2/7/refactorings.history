@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;WebContent&apos;&#x0D;&#x0A;- Original project: &apos;Bookstore-v01&apos;&#x0D;&#x0A;- Destination element: &apos;WebContent&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     index.html&#x0D;&#x0A;     pages&#x0D;&#x0A;     static" description="Copy elements" element1="WebContent/index.html" element2="WebContent/pages" element3="WebContent/static" files="1" flags="589830" folders="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1487071178232" target="/Bookstore-v02/WebContent" units="0" version="1.0"/>
+</session>

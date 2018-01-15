@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body {
+		text-align: center;
+	}
+	#small {
+		margin-top: 150px;
+	}
+	#showBig {
+		position: absolute;
+		display: none;
+	}
+</style>
+<script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//给id为small的图片绑定一个鼠标移入和鼠标移出事件
+		$("#small").bind("mouseenter mouseleave",function(){
+			$("#showBig").toggle();
+		})
+		//为id为small的图片绑定一个鼠标移动事件
+		$("#small").bind("mousemove",function(event){
+			//通过重新指定大图片的位置来实现跟随效果
+			$("#showBig").offset({
+				left:event.clientX+10,
+				top:event.clientY+10
+			})
+		})
+	});
+</script>
+</head>
+<body>
+
+	<img id="small" src="img/small.jpg" />
+	
+	<div id="showBig">
+		<img src="img/big.jpg">
+	</div>
+
+</body>
+</html>

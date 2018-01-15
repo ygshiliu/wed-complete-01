@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	window.onload = function(){
+		//首先获取button标签绑定单击事件
+		document.getElementById("btn").onclick = function(){
+			//ajax给我们提供了一个XMLHttpRequest对象，专门用来封装请求信息与响应信息
+			//也就是说，ajax的一切操作都是围绕着XMLHttpRequest对象来实现的
+			//创建XMLHttpRequest对象
+			var xhr = new XMLHttpRequest();
+			
+			//准备请求信息：比如说url、请求参数、请求方法
+			//这里是由浏览器进行解析的，所以绝对路径中一定要加上项目名
+			/*
+			参数列表：
+			method:表示请求方式，是一个String类型，值：“get"和“post”
+			url：发送给服务器的请求地址，String类型
+			async：是一个boolean型，用来指定是否是异步或同步。默认值 为true表示异步，false表示同步，通常不改变
+			*/
+			//当通过get请求向服务器的同一个地址发送多次请求时会产生缓存问题
+			xhr.open("get", "/17-web-ajax/AjaxServlet?name=Tom&t="+Math.random());
+			
+			//向服务器发送请求
+			//参数body表示请求体参数，而我们这里发送的是get请求，get请求没有请求体，所以可以不传
+			xhr.send();
+			//alert(xhr.readyState);
+			//接收响应
+			//获取响应信息是有条件的，必须在响应就绪之后
+			//可以通过研究XMLHttpRequest对象的readyState属性来判断
+			/*
+				0: 请求未初始化 
+				1: 服务器连接已建立 
+				2: 请求已接收 
+				3: 请求处理中 
+				4: 请求已完成，且响应已就绪 
+
+			*/
+			//给xhr对象的状态绑定onreadystatechange事件
+			xhr.onreadystatechange = function(){
+				//当readystate为4时，才获取响应信息
+				//同时响应状态码必须是200
+				if(xhr.readyState == 4 && xhr.status == 200){
+					var text = xhr.responseText;
+					alert(text);
+					
+				}
+			}
+			
+		}
+		
+		//使用ajax完成post请求
+		document.getElementById("btn02").onclick = function(){
+			//创建XMLHttpRequest对象
+			var xhr = new XMLHttpRequest();
+			//准备请求信息
+			xhr.open("post", "/17-web-ajax/AjaxServlet");
+			//如果发送post的请求需要设置一个请求头:Content-Type: application/x-www-form-urlencoded
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			//发送请求
+			xhr.send("name=Jerry&password=123123");
+			//接收响应
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					//获取响应字符串
+					//var content = xhr.responseText;
+					//获取xml形式的xml
+					var content = xhr.responseXML;
+					
+					//获取name值
+					var nameTag = content.getElementsByTagName("name");
+					var name = nameTag[0].firstChild.nodeValue;
+					
+					var div = document.getElementsByTagName("div")[0];
+					div.innerHTML += name;
+					
+				}
+			};
+		}
+		
+		document.getElementById("btn03").onclick = function(){
+			var xhr = new XMLHttpRequest();
+			xhr.open("post", "/17-web-ajax/AjaxServlet");
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			
+			/* 
+			var params = {name:"Lucy",password:"123123"};
+			params = JSON.stringify(params);
+			console.log(params);
+			xhr.send(params); 此处传入的是json字符串，并不符合http请求参数格式
+			*/
+			
+			xhr.send("name=Tom&password=123123");
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					//接收响应信息
+					var objstr = xhr.responseText;
+					//将字符串转换成对象
+					var obj = JSON.parse(objstr);
+					alert(obj.name);
+				}
+			}
+			
+		}
+	}
+
+</script>
+</head>
+<body>
+
+<h1>index.html</h1>
+
+<button id="btn">发送ajax请求(Get)</button>
+<button id="btn02">发送ajax请求(Post)</button>
+<button id="btn03">发送ajax请求(Post),返回Json</button>
+<br><br>
+<form action="/17-web-ajax/AjaxServlet" method="post">
+姓名：<input name="name" type="text" ><br><br>
+密码：<input type="password" name="password"><br><br>
+<input type="submit" value="提交">
+</form>
+
+<div></div>
+</body>
+</html>
